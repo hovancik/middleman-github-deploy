@@ -2,13 +2,16 @@
 set -e
 set -x
 
-TMP=$(mktemp -d -t jgd-XXXX)
+TMP=$(mktemp -d -t mgd-XXXX)
+yes | middleman new mgd-XXXX
+mv mgd-XXXX/* "${TMP}"
 
 CWD=$(pwd)
 git init "${TMP}"
 cd "${TMP}"
-echo "hello" > "test.html"
-git add "test.html"
+touch "source/test.html"
+echo "hello" > "source/test.html"
+git add .
 git config user.email "test@example.com"
 git config user.name "Test"
 git commit -am 'initial commit'
@@ -22,5 +25,6 @@ ls -al
 cat test.html | grep "hello"
 cd "${CWD}"
 rm -rf "${TMP}"
+rm -rf "mgd-XXXX"
 
 echo "success"
