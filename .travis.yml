@@ -12,4 +12,3 @@ script:
   - git config --global user.name "Test"
   - rake
   - ./test.sh
-
