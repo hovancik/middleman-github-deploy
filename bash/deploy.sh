@@ -5,7 +5,7 @@ set -o pipefail
 
 URL=$1
 BRANCH=$2
-SRC=$(pwd)
+
 TEMP=$(mktemp -d -t mgd-XXX)
 trap 'rm -rf ${TEMP}' EXIT
 CLONE=${TEMP}/clone
@@ -43,6 +43,8 @@ fi
 echo -e "\nDeploying into ${BRANCH} branch:"
 rm -rf *
 cp -R ${TEMP}/build/* .
+rm -rf ./*glob*
+cp -R "${TEMP}"/build/* .
 rm -f README.md
 git add .
 git commit -am "new version $(date)" --allow-empty

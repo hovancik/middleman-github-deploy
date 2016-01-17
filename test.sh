@@ -25,6 +25,6 @@ ls -al
 cat test.html | grep "hello"
 cd "${CWD}"
 rm -rf "${TMP}"
-rm -rf "mgd-XXXX"
+rm -rf "mgd-XXXX/"
 
 echo "success"

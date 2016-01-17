@@ -16,8 +16,8 @@ Gem::Specification.new do |s|
   s.email = 'conta.srdr@gmail.com'
   s.homepage = 'http://github.com/hovancik/middleman-github-deploy'
   s.files = `git ls-files`.split($RS)
-  s.executables = s.files.grep(/^bin\//) { |f| File.basename(f) }
-  s.test_files = s.files.grep(/^(test|spec|features)\//)
+  s.executables = s.files.grep(%r{/^bin\//}) { |f| File.basename(f) }
+  s.test_files = s.files.grep(%r{/^(test|spec|features)\/})
   s.rdoc_options = ['--charset=UTF-8']
   s.extra_rdoc_files = ['README.md', 'LICENSE.txt']
   s.add_runtime_dependency('trollop', '2.1.2')
