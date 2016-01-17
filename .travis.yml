@@ -1,11 +1,16 @@
 language: ruby
 rvm:
   - 2.0.0
+  - ruby-head
 branches:
   only:
     - master
 install:
   - bundle install
+matrix:
+  fast_finish: true
+  allow_failures:
+    - rvm: ruby-head
 script:
   - set -e
   - git config --global user.email "test@example.com"
