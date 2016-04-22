@@ -1,5 +1,3 @@
-[![DevOps By Rultor.com](http://www.rultor.com/b/hovancik/middleman-github-deploy)](http://www.rultor.com/p/hovancik/middleman-github-deploy)
-
 [![Build Status](https://travis-ci.org/hovancik/middleman-github-deploy.svg)](https://travis-ci.org/hovancik/middleman-github-deploy)
 [![Gem Version](https://badge.fury.io/rb/mgd.svg)](http://badge.fury.io/rb/mgd)
 [![Dependency Status](https://gemnasium.com/hovancik/middleman-github-deploy.svg)](https://gemnasium.com/hovancik/middleman-github-deploy)
