@@ -9,8 +9,8 @@ mgd stands for middleman-github-deploy and is a fork of [jgd](https://github.com
 mgd will automatically build your Middleman blog and push it to your gh-pages
 branch (or any other branch of your choice).
 
-## Ruby and Middleman Versions
-Everything should work find with middleman > 4 and ruby > 2.0
+## Ruby versions
+Everything should work fine with ruby > 2.0
 
 # Installation and Usage
 
