@@ -17,7 +17,11 @@ git config user.name "Test"
 git commit -am 'initial commit'
 cd "${CWD}"
 
-./bash/deploy.sh "${TMP}" gh-pages
+gem build mgd.gemspec
+gem install ./mgd-0.1.1.gem
+
+cd "${TMP}"
+mgd --url "${TMP}" --branch gh-pages
 
 cd "${TMP}"
 git checkout gh-pages

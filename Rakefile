@@ -24,8 +24,6 @@
 require 'rubygems'
 require 'rake'
 require 'rdoc'
-require 'rake/clean'
-CLEAN.include FileList['coverage', 'rdoc']
 
 def name
   @name ||= File.basename(Dir['*.gemspec'].first, '.*')
@@ -35,15 +33,7 @@ def version
   Gem::Specification.load(Dir['*.gemspec'].first).version
 end
 
-task default: [:clean, :test, :rubocop]
-
-require 'rake/testtask'
-desc 'Run all unit tests'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = false
-end
+task default: [:test, :rubocop]
 
 require 'rdoc/task'
 desc 'Build RDoc documentation'
@@ -52,6 +42,14 @@ Rake::RDocTask.new do |rdoc|
   rdoc.title = "#{name} #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
+end
+
+require 'rake/testtask'
+desc 'Run all unit tests'
+Rake::TestTask.new(:test) do |test|
+  test.libs << 'lib' << 'test'
+  test.pattern = 'test/**/test_*.rb'
+  test.verbose = false
 end
 
 require 'rubocop/rake_task'
