@@ -1,7 +1,6 @@
 [![Build Status](https://travis-ci.org/hovancik/middleman-github-deploy.svg)](https://travis-ci.org/hovancik/middleman-github-deploy)
 [![Gem Version](https://badge.fury.io/rb/mgd.svg)](http://badge.fury.io/rb/mgd)
 [![Dependency Status](https://gemnasium.com/hovancik/middleman-github-deploy.svg)](https://gemnasium.com/hovancik/middleman-github-deploy)
-[![Code Climate](http://img.shields.io/codeclimate/github/hovancik/middleman-github-deploy.svg)](https://codeclimate.com/github/hovancik/middleman-github-deploy)
 
 # What is mgd ?
 
@@ -9,6 +8,9 @@ mgd stands for middleman-github-deploy and is a fork of [jgd](https://github.com
 
 mgd will automatically build your Middleman blog and push it to your gh-pages
 branch (or any other branch of your choice).
+
+## Ruby and Middleman Versions
+Everything should work find with middleman > 4 and ruby > 2.0
 
 # Installation and Usage
 
