@@ -9,7 +9,28 @@ mgd stands for middleman-github-deploy and is a fork of [jgd](https://github.com
 mgd will automatically build your Middleman blog and push it to your gh-pages
 branch (or any other branch of your choice).
 
-## Ruby versions
+# Installation and Usage
+
+It is assumed that your blog is in the home directory of your repo.
+
+Install it first:
+
+```bash
+gem install mgd
+```
+
+Run it locally:
+
+```bash
+mgd
+```
+
+Now your site is deployed to `gh-pages` branch of your repo. Done.
+
+PS. You can also specify target branch, with is `gh-pages` by default. Use
+`--branch` command line option.
+
+## Ruby ad rubygems versions
 Everything should work fine with ruby > 2.0.
 
 There is a bug with rubygems (https://github.com/rubygems/rubygems/issues/1420), so if you're getting error like this:
@@ -33,32 +54,12 @@ check what is your gem version, should be higher than 2.6.3:
 $ gem --version
 ```
 
-you can update it via: 
+you can update it via:
 
 ```
 $ gem update --system  # you might need to be an administrator or root
 ```
 
-# Installation and Usage
-
-It is assumed that your blog is in the home directory of your repo.
-
-Install it first:
-
-```bash
-gem install mgd
-```
-
-Run it locally:
-
-```bash
-mgd
-```
-
-Now your site is deployed to `gh-pages` branch of your repo. Done.
-
-PS. You can also specify target branch, with is `gh-pages` by default. Use
-`--branch` command line option.
 
 # Deploying with Travis
 

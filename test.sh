@@ -18,7 +18,7 @@ git commit -am 'initial commit'
 cd "${CWD}"
 
 gem build mgd.gemspec
-gem install ./mgd-0.1.1.gem
+gem install ./mgd-0.2.0.gem
 
 cd "${TMP}"
 mgd --url "${TMP}" --branch gh-pages

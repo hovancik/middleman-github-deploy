@@ -3,7 +3,7 @@ STDOUT.sync = true
 
 require 'trollop'
 opts = Trollop.options do
-  version 'mgd 0.1.1'
+  version 'mgd 0.2.0'
   banner <<-EOS
 mgd is an automated deployer of Middleman site to Github Pages
 
