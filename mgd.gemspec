@@ -3,7 +3,7 @@ require 'English'
 Gem::Specification.new do |s|
   s.required_ruby_version = '>= 2.0.0'
   s.name = 'mgd'
-  s.version = '0.1.1'
+  s.version = '0.2.0'
   s.license = 'MIT'
   s.summary = 'Middleman Github Deploy'
   s.description = 'Automated deployment of your Middleman blog to Github Pages'
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ['--charset=UTF-8']
   s.extra_rdoc_files = ['README.md', 'LICENSE.txt']
   s.add_runtime_dependency('trollop', '2.1.2')
-  s.add_runtime_dependency('middleman', '~> 3.0', '>= 3.0.0')
+  s.add_runtime_dependency('middleman', '>= 3.0.0')
   s.add_development_dependency 'rdoc', '4.2.2'
   s.add_development_dependency 'minitest', '5.8.4'
   s.add_development_dependency 'rubocop', '0.39.0'
