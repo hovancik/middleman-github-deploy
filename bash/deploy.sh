@@ -19,7 +19,7 @@ cd "${CLONE}"
 
 echo -e "\nBuilding Middleman site:"
 rm -rf build
-middleman build
+bundle exec middleman build
 
 if [ ! -e build ]; then
   echo -e "\nMiddleman didn't generate anything in build!"
