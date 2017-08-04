@@ -9,6 +9,7 @@ mv mgd-XXXX/* "${TMP}"
 CWD=$(pwd)
 git init "${TMP}"
 cd "${TMP}"
+bundle install
 touch "source/test.html"
 echo "hello" > "source/test.html"
 git add .
