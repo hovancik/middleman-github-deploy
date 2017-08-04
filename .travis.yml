@@ -9,6 +9,7 @@ branches:
   only:
     - master
 install:
+  - gem update --system
   - bundle install
 matrix:
   fast_finish: true
