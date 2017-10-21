@@ -1,5 +1,3 @@
-# encoding: utf-8
-#
 # Copyright (c) 2014 TechnoPark Corp.
 # Copyright (c) 2014 Yegor Bugayenko
 #
@@ -33,8 +31,7 @@ def version
   Gem::Specification.load(Dir['*.gemspec'].first).version
 end
 
-task default: [:test, :rubocop]
-
+task default: %i[test rubocop]
 require 'rdoc/task'
 desc 'Build RDoc documentation'
 Rake::RDocTask.new do |rdoc|

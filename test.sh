@@ -22,6 +22,8 @@ gem build mgd.gemspec
 gem install ./mgd-0.2.0.gem
 
 cd "${TMP}"
+bundle install
+cat Gemfile
 mgd --url "${TMP}" --branch gh-pages
 
 cd "${TMP}"
