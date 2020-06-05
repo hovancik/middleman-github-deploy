@@ -4,11 +4,11 @@ STDOUT.sync = true
 require 'trollop'
 opts = Trollop.options do
   version 'mgd 0.2.0'
-  banner <<-EOS
-mgd is an automated deployer of Middleman site to Github Pages
+  banner <<-MGD
+  mgd is an automated deployer of Middleman site to Github Pages
 
-Usage: mgd [options]
-EOS
+  Usage: mgd [options]
+MGD
 
   opt :url, 'Github URL', type: String, default: ''
   opt :branch, 'Destination branch', type: String, default: 'gh-pages'

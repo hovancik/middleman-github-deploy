@@ -9,6 +9,7 @@ mv mgd-XXXX/* "${TMP}"
 CWD=$(pwd)
 git init "${TMP}"
 cd "${TMP}"
+bundle install
 touch "source/test.html"
 echo "hello" > "source/test.html"
 git add .
@@ -21,6 +22,8 @@ gem build mgd.gemspec
 gem install ./mgd-0.2.0.gem
 
 cd "${TMP}"
+bundle install
+cat Gemfile
 mgd --url "${TMP}" --branch gh-pages
 
 cd "${TMP}"
