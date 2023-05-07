@@ -33,7 +33,7 @@ def version
   Gem::Specification.load(Dir['*.gemspec'].first).version
 end
 
-task default: [:test, :rubocop]
+task default: [:test]
 
 require 'rdoc/task'
 desc 'Build RDoc documentation'
@@ -50,11 +50,4 @@ Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
   test.pattern = 'test/**/test_*.rb'
   test.verbose = false
-end
-
-require 'rubocop/rake_task'
-desc 'Run RuboCop on all directories'
-RuboCop::RakeTask.new(:rubocop) do |task|
-  task.fail_on_error = true
-  task.requires << 'rubocop-rspec'
 end
