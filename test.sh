@@ -3,7 +3,7 @@ set -e
 set -x
 
 TMP=$(mktemp -d -t mgd-XXXX)
-no | middleman new mgd-XXXX
+no | bundle exec middleman new mgd-XXXX
 mv mgd-XXXX/* "${TMP}"
 
 CWD=$(pwd)
